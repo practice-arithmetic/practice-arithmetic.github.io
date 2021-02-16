@@ -1,0 +1,41 @@
+.animated-input-container {
+    position: relative;
+    display: inline-flex;
+}
+
+.animated-input-container > input {
+    margin: 0;
+    padding: 0;
+    border-radius: 4px;
+    background-color: white;
+    border-width: 0 0 2px 0;
+    border-color: #ccc;
+    outline: none;
+    font-size: 40px;
+}
+
+.animated-input-container > span {
+    position: absolute;
+    border-bottom: 2px solid blue;
+    width: 0px;
+    height: 0;
+    bottom: 0;
+    transition: width 330ms ease-in-out;
+}
+
+.animated-input-container > input:focus + span {
+    width: 100%;
+    transition: width 330ms ease-in-out;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.animated-input-container > input::-webkit-outer-spin-button,
+.animated-input-container > input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+.animated-input-container > input[type=number] {
+  -moz-appearance: textfield;
+}

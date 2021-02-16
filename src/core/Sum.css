@@ -1,0 +1,35 @@
+.operand1 {
+    grid-area: operand1;
+}
+.operator {
+    grid-area: operator;
+}
+.operand2 {
+    grid-area: operand2;
+}
+.equals {
+    grid-area: equals;
+}
+.result {
+    grid-area: result;
+    width: 80px;
+}
+.mark {
+    grid-area: mark;
+}
+  
+.sum-container {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: "operand1 operator operand2 equals result mark";
+    font-size: 40px;
+    width: fit-content;
+    margin: 20px 0 0 20px;
+}
+
+input[type=button] {
+    height: 40px;
+    width: 80px;
+    margin: 40px 0 0 40px;
+}
