@@ -1,9 +1,9 @@
 import React, { ChangeEvent, memo } from 'react';
-import { ProposedStateType } from '../core/Sum';
+import { ResultPropsType } from '../core/Sum';
 import InputText from './Input/InputText';
 
 const safeSetValue = (value: number | undefined) => {
-    return value === undefined? '': value.toString();
+    return value === undefined ? '' : value.toString();
 }
 
 const safeGetValue = (value: string | undefined) => {
@@ -11,12 +11,12 @@ const safeGetValue = (value: string | undefined) => {
 }
 
 const Result = ({
-    proposed,
-    setProposed,
+    proposedTuple,
 }:
-    ProposedStateType,
+    ResultPropsType
 ) => {
 
+    const [proposed, setProposed] = proposedTuple;
 
     const processChange = (value: number | undefined) => {
         setProposed(value);

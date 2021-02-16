@@ -1,14 +1,14 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import './App.css';
-import Sum from './core/Sum';
+import Sums from './core/Sums';
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route>
-          <Sum />
+          <Sums />
         </Route>
       </Switch>
     </Router>

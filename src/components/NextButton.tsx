@@ -1,9 +1,14 @@
 import React, { MouseEvent, memo } from 'react';
-import { RefreshStateType } from '../core/Sum';
+
+export type NextButtonPropsType = {
+    className: string,
+    setRefresh: React.Dispatch<React.SetStateAction<boolean>>,
+};
 
 const NextButton = ({
+    className,
     setRefresh,
-}: RefreshStateType) => {
+}: NextButtonPropsType) => {
 
     const nextPage = () => {
         setRefresh(true);
@@ -14,7 +19,7 @@ const NextButton = ({
     }
 
     return (
-        <input type="button" onClick={handleClick} value="Next" />
+        <input type="button" className={className} onClick={handleClick} value="Next" />
     );
 }
 
